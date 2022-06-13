@@ -63,7 +63,7 @@
 * users
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
-    |id|varchar(11)|--|true|序號|
+    |id|int(11)|--|true|序號|
     |acc|varchar(12)|--|--|帳號|
     |pw|varchar(16)|--|--|密碼|
     |name|varchar(12)|--|名稱|
@@ -84,7 +84,9 @@
     |--|--|--|--|--|
     |id|varchar(11)|--|true|序號|
     |subject|varchar(128)|--|--|主題描述|
-    |type_id|int(11)|--|--|密碼|
+    |type_id|int(11)|--|--|密碼|    
+    |multiple|boolean(1)|--|--|單/複選|    
+    |mulit_limit|tinyint(2)|1|--|單/複選項目數|    
     |start|date|--|開始時間|
     |end|date|--|結束時間|
     |total|int(11)|--|投票人數統計|
