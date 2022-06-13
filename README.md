@@ -1,6 +1,5 @@
 # ClassNote-vote 
 
-
 ## 使用者故事 (user story)
 
 ### 共用
@@ -64,14 +63,48 @@
 * users
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
-    |acc|varchar(12)|--|true|序號|
-    |pw|varchar(16)|--|--|帳號|
-    |birthday|date|--|--|--|
-    |gender|tinyint(1)|--|--|--|
-    |addr|varchar(64)|--|--|--|
-    |education|varchar(32)|--|--|--|
+    |id|varchar(11)|--|true|序號|
+    |acc|varchar(12)|--|--|帳號|
+    |pw|varchar(16)|--|--|密碼|
+    |name|varchar(12)|--|名稱|
+    |birthday|date|--|--|生日|
+    |gender|tinyint(1)|--|--|性別|
+    |addr|varchar(64)|--|--|地址|
+    |education|varchar(32)|--|--|學歷|
+    |reg_date|date|--|--|註冊時間|
 * admins
+    |名稱|型態|預設值|A_I|備註|
+    |--|--|--|--|--|
+    |id|varchar(11)|--|true|序號|
+    |acc|varchar(12)|--|--|帳號|
+    |pw|varchar(16)|--|--|密碼|
+    |name|varchar(12)|--|名稱|
 * subjects
+    |名稱|型態|預設值|A_I|備註|
+    |--|--|--|--|--|
+    |id|varchar(11)|--|true|序號|
+    |subject|varchar(128)|--|--|主題描述|
+    |type_id|int(11)|--|--|密碼|
+    |start|date|--|開始時間|
+    |end|date|--|結束時間|
+    |total|int(11)|--|投票人數統計|
 * options
+    |名稱|型態|預設值|A_I|備註|
+    |--|--|--|--|--|
+    |id|varchar(11)|--|true|序號|
+    |option|varchar(128)|--|--|選項描述|
+    |subject_id|int(11)|--|--|主題|
+    |total|int(11)|--|投票人數統計|
 * log
+    |名稱|型態|預設值|A_I|備註|
+    |--|--|--|--|--|
+    |id|varchar(11)|--|true|序號|
+    |user_id|int(11)|--|--|投票者|
+    |subject_id|int(11)|--|--|投票題目|
+    |option_id|int(11)|--|--|選項|
+    |vote_time|timestamp|--|投票時間|
 * type
+    |名稱|型態|預設值|A_I|備註|
+    |--|--|--|--|--|
+    |id|varchar(11)|--|true|序號|
+    |name|varchar(128)|--|--|分類名稱|
