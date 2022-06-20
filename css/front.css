@@ -3,6 +3,12 @@
     min-height:calc(100vh - 300px - 3rem );
 
 }
+
+#header .slider{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .list{
     margin:1rem 0 1rem 6rem;
 }
