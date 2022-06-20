@@ -1,10 +1,10 @@
 <form action="./api/add_vote.php" method="post">
     <div>
         <select name="types" id="types">
-            <?php
+        <?php
             $types=all("types");
             foreach($types as $type){
-                echo "<optcion value='{$type['id']}'>";
+                echo "<option value='{$type['id']}'>";
                 echo $type['name'];
                 echo "</option>";
             }

@@ -20,7 +20,7 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
             <td><?=$opt['option'];?></td>
             <td><?=$opt['total'];?></td>
             <td>
-                <div style="display:inline-block;height:24px;background:skyblue;width:<?=300*$ratepx;?>px;"></div>
+                <div style="display:inline-block;height:24px;background:skyblue;width:<?=300*$rate;?>px;"></div>
                 <?=($rate*100) . "%";?>
             </td>
         </tr>

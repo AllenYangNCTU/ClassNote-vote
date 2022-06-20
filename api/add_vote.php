@@ -1,7 +1,6 @@
 <?php
 //引入base.php
 include_once "base.php";
-
 //接收來自表單傳來的投票主題文字內容
 $subject=$_POST['subject'];
 

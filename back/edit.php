@@ -9,11 +9,11 @@ dd($opts); */
 <form action="../api/edit_vote.php" method="post">
 <div>
         <select name="types" id="types">
-            <?php
+        <?php
             $types=all("types");
             foreach($types as $type){
                 $selected=($subj['type_id']==$type['id'])?'selected':'';
-                echo "<optcion value='{$type['id']}' $selected>";
+                echo "<option value='{$type['id']}' $selected>";
                 echo $type['name'];
                 echo "</option>";
             }
