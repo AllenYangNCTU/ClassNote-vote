@@ -64,7 +64,22 @@
             
         }
         //使用all()函式來取得資料表subjects中的所有資料，請參考base.php中的函式all($table,...$arg)
-        $subjects = all('subjects', $orderStr);
+        
+        /** 建立分業所需的變數群
+         * 
+         * 
+         * 
+         * */ 
+        
+        $total=math('subjects','count','id');
+        $div=3;
+        $pages=ceil($total/$div);
+        $now=isset($_GET['p'])?$_GET['p']:1;
+        $start=($now-1)*$div;
+        $page_rows="limit $start,$div";
+        echo $total;
+        
+        $subjects = all('subjects', $orderStr . $page_rows);
 
         //使用迴圈將每一筆資料的內容顯示在畫面上
         foreach ($subjects as $subject) {
@@ -97,5 +112,15 @@
 
         ?>
     </ul>
+    <div class="text-center">
+    <?php
+    for($i=1;$i<=$pages;$i++){
+
+        echo "<a href='?p={$i}&{$orderStr}'>&nbsp;";
+        echo $i;
+        echo "</a>";
+    }
+    ?>
+    </div>
 
 </div>
